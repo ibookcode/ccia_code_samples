@@ -1,4 +1,6 @@
 #include <thread>
+#include <chrono>
+#include <iostream>
 
 void do_something(int& i)
 {
@@ -17,6 +19,7 @@ struct func
         {
             do_something(i);
         }
+        std::cout << "i = " << i << std::endl;
     }
 };
 
@@ -32,4 +35,6 @@ void oops()
 int main()
 {
     oops();
+    using namespace std::chrono_literals;
+    std::this_thread::sleep_for(1000ms);
 }
