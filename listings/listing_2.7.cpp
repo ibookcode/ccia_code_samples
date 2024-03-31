@@ -1,23 +1,68 @@
-#include <vector>
 #include <thread>
-#include <algorithm>
-#include <functional>
 
-void do_work(unsigned id)
-{}
-
-void f()
+// Listing 2.7 A joining_thread class
+// joining_thread class would automatically join in the destructor much like scoped_thread does.
+class joining_thread
 {
-    std::vector<std::thread> threads;
-    for(unsigned i=0;i<20;++i)
+    std::thread t;
+
+public:
+    joining_thread() noexcept = default;
+    template <typename Callable, typename... Args>
+    explicit joining_thread(Callable &&func, Args &&...args) : 
+        t(std::forward<Callable>(func), std::forward<Args>(args)...)
+    {}
+    explicit joining_thread(std::thread t_) noexcept : 
+        t(std::move(t_))
+    {}
+    joining_thread(joining_thread &&other) noexcept : 
+        t(std::move(other.t))
+    {}
+    joining_thread &operator=(joining_thread &&other) noexcept
     {
-        threads.push_back(std::thread(do_work,i));
+        if (joinable())
+            join();
+        t = std::move(other.t);
+        return *this;
     }
-    std::for_each(threads.begin(),threads.end(),
-        std::mem_fn(&std::thread::join));
-}
-
-int main()
-{
-    f();
-}
+    joining_thread &operator=(std::thread other) noexcept
+    {
+        if (joinable())
+            join();
+        t = std::move(other);
+        return *this;
+    }
+    ~joining_thread() noexcept
+    {
+        if (joinable())
+            join();
+    }
+    void swap(joining_thread &other) noexcept
+    {
+        t.swap(other.t);
+    }
+    std::thread::id get_id() const noexcept
+    {
+        return t.get_id();
+    }
+    bool joinable() const noexcept
+    {
+        return t.joinable();
+    }
+    void join()
+    {
+        t.join();
+    }
+    void detach()
+    {
+        t.detach();
+    }
+    std::thread &as_thread() noexcept
+    {
+        return t;
+    }
+    const std::thread &as_thread() const noexcept
+    {
+        return t;
+    }
+};

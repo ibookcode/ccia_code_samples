@@ -23,3 +23,5 @@ listing_2.4.cpp
 listing_2.5.cpp
 
 listing_2.6.cpp
+
+listing_2.7.cpp
