@@ -36,6 +36,7 @@ std::string get_filename_from_user()
 void process_user_input(user_command const& cmd)
 {}
 
+// Listing 2.4 Detaching a thread to handle other documents
 void edit_document(std::string const& filename)
 {
     open_document_and_display_gui(filename);
@@ -44,6 +45,7 @@ void edit_document(std::string const& filename)
         user_command cmd=get_user_input();
         if(cmd.type==open_new_document)
         {
+            // the new thread is doing the same operation as the current thread but on a different file
             std::string const new_name=get_filename_from_user();
             std::thread t(edit_document,new_name);
             t.detach();
