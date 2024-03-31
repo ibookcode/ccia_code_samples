@@ -65,3 +65,5 @@ listing_3.8.cpp
 ### 3.2.6 Flexible locking with std::unique_lock
 
 listing_3.9.cpp
+
+### 3.2.8 Locking at an appropriate granularity

@@ -1,5 +1,6 @@
 #include <mutex>
 
+// Listing 3.9 Using std::lock() and std::unique_lock in a swap operation
 class some_big_object
 {};
 
@@ -18,8 +19,10 @@ public:
     {
         if(&lhs==&rhs)
             return;
+        // std::defer_lock leaves mutexes unlocked.
         std::unique_lock<std::mutex> lock_a(lhs.m,std::defer_lock);
         std::unique_lock<std::mutex> lock_b(rhs.m,std::defer_lock);
+        // Mutexes are locked here.
         std::lock(lock_a,lock_b);
         swap(lhs.some_detail,rhs.some_detail);
     }
