@@ -31,3 +31,11 @@ listing_2.8.cpp
 ### 2.4 Choosing the number of threads at runtime
 
 listing_2.9.cpp
+
+## 3 Sharing data between threads
+
+### 3.2 Protecting shared data with mutexes
+
+#### 3.2.1 Using mutexes in C++
+
+listing_3.1.cpp

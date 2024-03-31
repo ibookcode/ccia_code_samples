@@ -1,13 +1,20 @@
 #include <list>
 #include <mutex>
 #include <algorithm>
+#include <iostream>
 
+// Listing 3.1 Protecting a list with a mutex
 std::list<int> some_list;
 std::mutex some_mutex;
 
 void add_to_list(int new_value)
 {
+    // The std::lock_guard locks the supplied mutex on construction and unlocks it on destruction
     std::lock_guard<std::mutex> guard(some_mutex);
+    // C++17 has a new feature called class template argument deduction
+    // std::lock_guard guard(some_mutex);
+    // C++17 also introduces an enhanced version of lock guard
+    // std::scoped_lock guard(some_mutex);
     some_list.push_back(new_value);
 }
 bool list_contains(int value_to_find)
@@ -17,7 +24,6 @@ bool list_contains(int value_to_find)
         != some_list.end();
 }
 
-#include <iostream>
 
 int main()
 {
