@@ -47,3 +47,5 @@ listing_3.2.cpp
 ### 3.2.3 Spotting race conditions inherent in interfaces
 
 listing_3.3.cpp
+
+listing_3.4.cpp
