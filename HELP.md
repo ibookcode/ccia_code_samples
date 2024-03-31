@@ -59,3 +59,5 @@ listing_3.6.cpp
 ### 3.2.5 Further guidelines for avoiding deadlock
 
 listing_3.7.cpp
+
+listing_3.8.cpp
