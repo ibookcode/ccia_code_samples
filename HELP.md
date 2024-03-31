@@ -27,3 +27,7 @@ listing_2.6.cpp
 listing_2.7.cpp
 
 listing_2.8.cpp
+
+### 2.4 Choosing the number of threads at runtime
+
+listing_2.9.cpp
