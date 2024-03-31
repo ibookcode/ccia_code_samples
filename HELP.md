@@ -39,3 +39,7 @@ listing_2.9.cpp
 #### 3.2.1 Using mutexes in C++
 
 listing_3.1.cpp
+
+### 3.2.2 Structuring code for protecting shared data
+
+listing_3.2.cpp

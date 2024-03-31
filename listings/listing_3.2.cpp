@@ -1,5 +1,6 @@
 #include <mutex>
 
+// Listing 3.2 Accidentally passing out a reference to protected data
 class some_data
 {
     int a;
@@ -19,6 +20,7 @@ public:
     void process_data(Function func)
     {
         std::lock_guard<std::mutex> l(m);
+        // Pass "protected" data to user-supplied function
         func(data);
     }
 };
@@ -34,7 +36,9 @@ data_wrapper x;
 
 void foo()
 {
+    // Pass in a malicious function to bypass the protection
     x.process_data(malicious_function);
+    // Unprotected access to protected data
     unprotected->do_something();
 }
 
