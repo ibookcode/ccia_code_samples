@@ -7,7 +7,7 @@ void do_something(int& i)
     ++i;
 }
 
-// A function that returns while a thread still has access to local variables
+// Listing 2.1 A function that returns while a thread still has access to local variables
 struct func
 {
     int& i;
