@@ -43,3 +43,7 @@ listing_3.1.cpp
 ### 3.2.2 Structuring code for protecting shared data
 
 listing_3.2.cpp
+
+### 3.2.3 Spotting race conditions inherent in interfaces
+
+listing_3.3.cpp

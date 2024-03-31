@@ -1,5 +1,7 @@
 #include <deque>
 #include <cstddef>
+
+// Listing 3.3 The interface to the std::stack container adapter
 template<typename T,typename Container=std::deque<T> >
 class stack
 {
