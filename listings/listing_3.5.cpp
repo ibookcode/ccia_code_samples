@@ -3,6 +3,7 @@
 #include <mutex>
 #include <memory>
 
+// Listing 3.5 A fleshed-out class definition for a thread-safe stack
 struct empty_stack: std::exception
 {
     const char* what() const throw()
@@ -23,6 +24,7 @@ public:
     threadsafe_stack(const threadsafe_stack& other)
     {
         std::lock_guard<std::mutex> lock(other.m);
+        // Copy performed in constructor body
         data=other.data;
     }
     threadsafe_stack& operator=(const threadsafe_stack&) = delete;
@@ -35,7 +37,9 @@ public:
     std::shared_ptr<T> pop()
     {
         std::lock_guard<std::mutex> lock(m);
+        // Check for empty before trying to pop value
         if(data.empty()) throw empty_stack();
+        // Allocate return value before modifying stack
         std::shared_ptr<T> const res(std::make_shared<T>(data.top()));
         data.pop();
         return res;
