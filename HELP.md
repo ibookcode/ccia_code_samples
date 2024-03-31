@@ -17,3 +17,7 @@ listing_2.3.cpp
 #### 2.1.4 Running threads in the background
 
 listing_2.4.cpp
+
+### 2.3 Transferring ownership of a thread
+
+listing_2.5.cpp
