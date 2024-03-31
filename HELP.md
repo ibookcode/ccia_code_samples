@@ -53,3 +53,5 @@ listing_3.4.cpp
 listing_3.5.cpp
 
 ### 3.2.4 Deadlock: the problem and a solution
+
+listing_3.6.cpp
