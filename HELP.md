@@ -67,3 +67,5 @@ listing_3.8.cpp
 listing_3.9.cpp
 
 ### 3.2.8 Locking at an appropriate granularity
+
+listing_3.10.cpp
