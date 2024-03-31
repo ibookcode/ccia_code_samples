@@ -75,3 +75,9 @@ listing_3.10.cpp
 ### 3.3.1 Protecting shared data during initialization
 
 listing_3.11.cpp
+
+listing_3.12.cpp
+
+### 3.3.2 Protecting rarely updated data structures
+
+listing_3.13.cpp
