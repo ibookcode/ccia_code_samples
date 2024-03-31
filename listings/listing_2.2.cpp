@@ -23,6 +23,7 @@ struct func
 void do_something_in_current_thread()
 {}
 
+// Listing 2.2 Waiting for a thread to finish
 void f()
 {
     int some_local_state=0;
@@ -34,6 +35,9 @@ void f()
     }
     catch(...)
     {
+        // if you were intending to call join() in a non-exceptional case, 
+        // you also need to call join() in the presence of an exception 
+        // to avoid accidental lifetime problems.
         t.join();
         throw;
     }
