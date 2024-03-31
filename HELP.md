@@ -21,3 +21,5 @@ listing_2.4.cpp
 ### 2.3 Transferring ownership of a thread
 
 listing_2.5.cpp
+
+listing_2.6.cpp
