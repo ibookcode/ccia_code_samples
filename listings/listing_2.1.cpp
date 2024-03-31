@@ -29,6 +29,8 @@ void oops()
 {
     int some_local_state=0;
     func my_func(some_local_state);
+    // the new thread associated with my_thread will probably still be running when oops exits, 
+    // because you’ve explicitly decided not to wait for it by calling detach().
     std::thread my_thread(my_func);
     my_thread.detach();
 }
