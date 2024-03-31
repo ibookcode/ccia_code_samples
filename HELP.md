@@ -61,3 +61,7 @@ listing_3.6.cpp
 listing_3.7.cpp
 
 listing_3.8.cpp
+
+### 3.2.6 Flexible locking with std::unique_lock
+
+listing_3.9.cpp
