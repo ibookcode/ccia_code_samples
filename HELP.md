@@ -69,3 +69,9 @@ listing_3.9.cpp
 ### 3.2.8 Locking at an appropriate granularity
 
 listing_3.10.cpp
+
+## 3.3 Alternative facilities for protecting shared data
+
+### 3.3.1 Protecting shared data during initialization
+
+listing_3.11.cpp
