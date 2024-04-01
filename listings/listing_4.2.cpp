@@ -1,5 +1,7 @@
 #include <deque>
 #include <cstddef>
+
+// Listing 4.2 std::queue interface
 template <class T, class Container = std::deque<T> >
 class queue {
 public:
