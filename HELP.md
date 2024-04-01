@@ -81,3 +81,11 @@ listing_3.12.cpp
 ### 3.3.2 Protecting rarely updated data structures
 
 listing_3.13.cpp
+
+## 4 Synchronizing concurrent operations
+
+### 4.1 Waiting for an event or other condition
+
+#### 4.1.1 Waiting for a condition with condition variables
+
+listing_4.1.cpp
