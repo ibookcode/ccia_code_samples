@@ -3,6 +3,7 @@
 #include <mutex>
 #include <shared_mutex>
 
+// Listing 3.13 Protecting a data structure with std::shared_mutex
 class dns_entry
 {};
 
