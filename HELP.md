@@ -89,3 +89,9 @@ listing_3.13.cpp
 #### 4.1.1 Waiting for a condition with condition variables
 
 listing_4.1.cpp
+
+#### 4.1.2 Building a thread-safe queue with condition variables
+
+listing_4.2.cpp
+
+listing_4.3.cpp
