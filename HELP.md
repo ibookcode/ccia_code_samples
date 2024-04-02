@@ -95,3 +95,9 @@ listing_4.1.cpp
 listing_4.2.cpp
 
 listing_4.3.cpp
+
+listing_4.4.cpp
+
+listing_4.5.cpp
+
+### 4.2 Waiting for one-off events with futures
