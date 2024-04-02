@@ -123,3 +123,9 @@ listing_4.10.cpp
 #### 4.3.3 Time points
 
 listing_4.11.cpp
+
+### 4.4 Using synchronization of operations to simplify code
+
+#### 4.4.1 Functional programming with futures
+
+listing_4.12.cpp
