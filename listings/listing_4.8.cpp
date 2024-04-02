@@ -1,6 +1,8 @@
 #include <string>
 #include <vector>
 #include <future>
+
+// Listing 4.8 Partial class definition for a specialization of std::packaged_task< >
 template<>
 class packaged_task<std::string(std::vector<char>*,int)>
 {
