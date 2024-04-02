@@ -3,10 +3,13 @@
 #include <queue>
 #include <memory>
 
+// Listing 4.5 Full class definition of a thread-safe queue using condition variables
 template<typename T>
 class threadsafe_queue
 {
 private:
+    // Since locking a mutex is a mutating operation, the mutex object must be marked mutable,
+    // so it can be locked in empty() and in the copy constructor.
     mutable std::mutex mut;
     std::queue<T> data_queue;
     std::condition_variable data_cond;
