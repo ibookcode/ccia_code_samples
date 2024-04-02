@@ -135,3 +135,13 @@ listing_4.13.cpp
 listing_4.14.cpp
 
 #### 4.4.2 Synchronizing operations with message passing
+
+listing_4.15.cpp
+
+listing_4.16.cpp
+
+#### 4.4.3 Continuation-style concurrency with the Concurrency TS
+
+listing_4.17.cpp
+
+#### 4.4.4 Chaining continuations
