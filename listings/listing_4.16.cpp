@@ -1,5 +1,7 @@
+// Listing 4.16 The getting_pin state function for the simple ATM implementation
 void atm::getting_pin()
 {
+    // This time, there are three message types you can process, so the wait() function has three handle() calls chained on the end.
     incoming.wait()
         .handle<digit_pressed>(
             [&](digit_pressed const& msg)
