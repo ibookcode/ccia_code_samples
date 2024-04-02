@@ -42,12 +42,12 @@ public:
 };
 // Calls tmp() where tmp is constructed from std::move(move_only())
 auto f5=std::async(move_only());
-
-// Run in new thread
+ 
+// std::launch::async indicates that the function must be run in new thread
 auto f6=std::async(std::launch::async,Y(),1.2);
-// Run in wait() or get()
+// std::launch::deferred indicates that the function call is to be deferred until either wait() or get() is called on the future
 auto f7=std::async(std::launch::deferred,baz,std::ref(x));
-// Implementation chooses
+// std::launch::deferred | std::launch::async indicates that the implementation may choose.
 auto f8=std::async(
     std::launch::deferred | std::launch::async,
     baz,std::ref(x));
