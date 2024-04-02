@@ -101,3 +101,7 @@ listing_4.4.cpp
 listing_4.5.cpp
 
 ### 4.2 Waiting for one-off events with futures
+
+#### 4.2.1 Returning values from background tasks
+
+listing_4.6.cpp
