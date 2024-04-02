@@ -105,3 +105,11 @@ listing_4.5.cpp
 #### 4.2.1 Returning values from background tasks
 
 listing_4.6.cpp
+
+listing_4.7.cpp
+
+#### 4.2.2 Associating a task with a future
+
+listing_4.8.cpp
+
+listing_4.9.cpp
