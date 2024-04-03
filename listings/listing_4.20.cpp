@@ -1,4 +1,7 @@
 #include <experimental/future>
+
+// Listing 4.20 A function to process user login with continuations
+// In order to avoid all these blocked threads, you need some mechanism for chaining tasks as they each complete: continuations.
 std::experimental::future<void> process_login(
     std::string const& username,std::string const& password)
 {
