@@ -1,4 +1,6 @@
 #include <future>
+
+// Listing 4.22 Gathering results from futures using std::async
 std::future<FinalResult> process_data(std::vector<MyData>& vec)
 {
     size_t const chunk_size=whatever;
@@ -15,6 +17,7 @@ std::future<FinalResult> process_data(std::vector<MyData>& vec)
         v.reserve(all_results.size());
         for(auto& f: all_results)
         {
+            // Because it waits for each task individually, it will repeatedly be woken by the scheduler.
             v.push_back(f.get());
         }
         return gather_results(v);
