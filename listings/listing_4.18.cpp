@@ -1,4 +1,6 @@
 #include <string>
+
+// Listing 4.18 A simple sequential function to process user login
 void process_login(std::string const& username,std::string const& password)
 {
     try {
