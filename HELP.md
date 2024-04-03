@@ -145,3 +145,15 @@ listing_4.16.cpp
 listing_4.17.cpp
 
 #### 4.4.4 Chaining continuations
+
+listing_4.18.cpp
+
+listing_4.19.cpp
+
+listing_4.20.cpp
+
+listing_4.21.cpp
+
+#### 4.4.5 Waiting for more than one future
+
+listing_4.22.cpp
