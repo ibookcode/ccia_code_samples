@@ -157,3 +157,9 @@ listing_4.21.cpp
 #### 4.4.5 Waiting for more than one future
 
 listing_4.22.cpp
+
+listing_4.23.cpp
+
+#### 4.4.6 Waiting for the first future in a set with when_any
+
+listing_4.24.cpp
